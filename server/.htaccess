@@ -1,0 +1,34 @@
+# Désactiver le listing des répertoires
+Options -Indexes
+
+# Bloquer l'accès à config.json et aux fichiers sensibles
+<Files "config.json">
+    Deny from all
+</Files>
+
+# En-têtes de sécurité
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# Réécriture d'URLs + forcer HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /obsidian/
+
+    # Forcer HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # URLs propres vers index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([a-zA-Z0-9_-]+)/?$ index.php?folder=$1 [QSA,L]
+</IfModule>
+
+# Cache des images
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
