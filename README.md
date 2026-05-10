@@ -54,10 +54,10 @@ Ces fonctionnalités sont détectées et rendues automatiquement **si tu les uti
 | [Dataview](https://github.com/blacksmithgu/obsidian-dataview) | Tables, listes de tâches, requêtes (`TABLE`, `TASK`, `LIST`, `WHERE`, `SORT`, `GROUP BY`…) |
 | [Lite Gallery](https://github.com/jpoles1/obsidian-litegal) | Carrousel d'images interactif (blocs ` ```litegal `) |
 
+![Carrousel](screenshots/Carousel.png)
+
 ### Viewer 3D STL
 Les liens vers des fichiers `.stl` locaux (ex: pièces imprimées en 3D) sont détectés, copiés, et affichés dans un viewer 3D interactif (WebGL / Three.js) directement dans un onglet du site.
-
-![Carrousel](screenshots/Carousel.png)
 
 ![STL viewer](screenshots/3D%20-%20STL.png)
 
