@@ -8,14 +8,11 @@ Un script Python prépare et uploade vos notes sur votre serveur. Un frontend PH
 
 ## Aperçu
 
-> 📸 **[Capture 1 — Page d'accueil / sélection du projet]**
-> *Remplacer cette ligne par une image : `![Accueil](docs/screenshots/accueil.png)`*
+![Connexion](screenshots/Connexion.png)
 
-> 📸 **[Capture 2 — Vue d'une note avec sidebar et onglets]**
-> *Remplacer cette ligne par une image : `![Vue note](docs/screenshots/note.png)`*
+![Vue note](screenshots/Home.png)
 
-> 📸 **[Capture 3 — Exemple avec Dataview ou carrousel]**
-> *Remplacer cette ligne par une image : `![Fonctionnalités](docs/screenshots/features.png)`*
+![Dataview](screenshots/Dataview.png)
 
 ---
 
@@ -60,8 +57,9 @@ Ces fonctionnalités sont détectées et rendues automatiquement **si tu les uti
 ### Viewer 3D STL
 Les liens vers des fichiers `.stl` locaux (ex: pièces imprimées en 3D) sont détectés, copiés, et affichés dans un viewer 3D interactif (WebGL / Three.js) directement dans un onglet du site.
 
-> 📸 **[Capture 4 — Viewer STL 3D]**
-> *Remplacer cette ligne par une image : `![STL viewer](docs/screenshots/stl.png)`*
+![Carrousel](screenshots/Carousel.png)
+
+![STL viewer](screenshots/3D%20-%20STL.png)
 
 > ⚠️ Les fichiers STL nécessitent un lien `file://` valide sur ta machine au moment du traitement — le script les copie ensuite automatiquement.
 
